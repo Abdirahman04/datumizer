@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/Abdirahman04/datumizer/floatka"
 	"github.com/Abdirahman04/datumizer/intka"
 	"github.com/Abdirahman04/datumizer/stringka"
 )
@@ -11,4 +12,5 @@ func main() {
 
 	fmt.Println("RandomString => ", stringka.RandomString(6))
 	fmt.Println("RandomInt => ", intka.RandomInt(4))
+	fmt.Println("RandomFloat => ", floatka.RandomFloat(3, 2))
 }
