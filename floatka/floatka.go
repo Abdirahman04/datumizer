@@ -6,12 +6,11 @@ import (
 )
 
 func RandomFloat(ln, dec float64) float64 {
+	dc := math.Pow(10, dec)
 	whole := rand.Intn(int(math.Pow(10, ln)))
-	decimals := rand.Intn(int(math.Pow(10, dec)))
+	decimals := rand.Intn(int(dc))
 
-	num := whole + decimals
+	num := (whole * int(dc)) + decimals
 
-	fl := math.Pow(10, dec)
-
-	return float64(num) / fl
+	return float64(num) / dc
 }
