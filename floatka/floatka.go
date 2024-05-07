@@ -5,13 +5,13 @@ import (
 	"math/rand"
 )
 
-func RandomFloat(ln, dec int) float64 {
-	whole := rand.Intn(ln)
-	decimals := rand.Intn(dec)
+func RandomFloat(ln, dec float64) float64 {
+	whole := rand.Intn(int(math.Pow(10, ln)))
+	decimals := rand.Intn(int(math.Pow(10, dec)))
 
 	num := whole + decimals
 
-	fl := math.Pow(10, float64(dec))
+	fl := math.Pow(10, dec)
 
 	return float64(num) / fl
 }
